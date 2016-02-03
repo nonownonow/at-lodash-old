@@ -1,11 +1,11 @@
 @main = ->
-  @one = 'oen'
-@main.tag = 'caller'
+    @one = 'oen'
 @init = ->
 @supp = ->
 
-@caller_noTDD=require './index.test.normalCaller'
-@startModule=require.main.filename
+@tag = 'caller'
+@caller_noTDD = require './index.test.normalCaller'
+@startModule = require.main.filename
 require '../src/at'
 
 
