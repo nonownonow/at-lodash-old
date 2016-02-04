@@ -5,7 +5,7 @@ require 'should-sinon'
 caller = require './index_caller'
 #normal_caller
 
-describe "at", ->
+describe "at : core", ->
    context "when 'at' be called by module.parent.export, it initialize module.parent.export", ->
       it "should make module.parent.export.main function to module.parent.export and at is not cashed by nodejs", ->
       it "should make parent module's var module.parent.export.main function's var", ->
@@ -24,7 +24,7 @@ describe "at", ->
 
       it "should have properties that is information of caller", ->
          caller.at.moduleName.should.be.eql('index_caller')
-describe "at : function.core", ->
+describe "at : core.function", ->
    describe "@setAliases(obj)", ->
       context "when the obj.key name not present in module.exports", ->
          it "should set aliasName about obj.value which is function in module.exports"
