@@ -1,7 +1,5 @@
 @main=->
-   @G.check=null
 @main.tag='normalCaller'
-@supp=->
 @init=->
 
 #hacking the @startModule

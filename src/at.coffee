@@ -9,8 +9,7 @@ main = module.parent.exports.main.bind @
 _.assign main, module.parent.exports
 _.each require.cache, (v, k, cache)->
    delete cache[k] if /at[.](?:js|coffee)/.test k
-
-@__proto__ = new ->
+@__proto__ = new (->)
 u_FDD = _.intersection (_.keys _), (_.keys U)
 _.each u_FDD, (v)-> U["u_#{v}"] = U[v]
 _.assign @__proto__, U
@@ -26,7 +25,7 @@ path = require 'path'
       depth: 12
 
 unless process.config.isLoadedAT
-   process.config.isLoadedAT = true
+   process.config.isLoadedAT = !process.config.isLoadedAT
    process.config.at = {}
 @G = process.config.at
 
@@ -34,11 +33,18 @@ unless process.config.isLoadedAT
 #@set process.config,'at',{}
 # when parent is 'mocha', exclude context
 
-@setAliases = (obj)->
-   @map obj, (v, k)-> @__proto__[k]=@[v]
+@setAliases = (target,source)->
+   @each source, (v,k)->
+      if v of target
+         throw "target should not have key:#{v}"
+      target[v]=target[k]
+#         throw new Error 'err'
+
+main.supp?.call @
 isTDD = main.startModule isnt module.parent.filename
-main.at = @ if isTDD
+main.context = @ if isTDD
 
 module.parent.exports = main
+module.exports=->
 
 
