@@ -1,11 +1,14 @@
+_=require 'lodash'
 @main = ->
-   @one = 'oen'
+   @isContext=true
+   @G.check=null
 @init = ->
 @supp = ->
+   @supp_fn1=->
+   @supp_fn2=->
 
 @tag = 'caller'
-@caller_noTDD = require './index_caller_noTDD'
-@caller_noTDD()
+#@caller_noTDD()
 
 @startModule = require.main.filename
 require '../src/at'
