@@ -15,4 +15,4 @@ node_modules
 
 #webstorm conf directory
 .idea
-.comp/**/*
+.comp
