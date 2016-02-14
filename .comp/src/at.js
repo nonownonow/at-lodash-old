@@ -1,18 +1,18 @@
-var U, _, isTDD, main, path, ref, u, u_FDD;
+var _, isTDD, main, parentDir, path, ref, ref1, require_files;
 
 _ = require('lodash');
 
-this.s = require('underscore.string');
+this.__proto__ = (function() {});
 
-_.mixin(this.s.exports());
+parentDir = (ref = module.parent.filename.match(/(.+)\/.+/)) != null ? ref[1] : void 0;
 
-u = require('underscore');
-
-U = require('underscore-contrib');
-
-this.S = require('string');
-
-this.S.extendPrototype();
+require_files = ["./at_require", "./at_load", parentDir + "/load"].forEach((function(_this) {
+  return function(v) {
+    try {
+      return Object.assign(_this.__proto__, require(v));
+    } catch (undefined) {}
+  };
+})(this));
 
 main = module.parent.exports.main.bind(this);
 
@@ -23,20 +23,6 @@ _.each(require.cache, function(v, k, cache) {
     return delete cache[k];
   }
 });
-
-this.__proto__ = new (function() {});
-
-u_FDD = _.intersection(_.keys(_), _.keys(U));
-
-_.each(u_FDD, function(v) {
-  return U["u_" + v] = U[v];
-});
-
-_.assign(this.__proto__, U);
-
-_.assign(this.__proto__, u);
-
-_.assign(this.__proto__, _);
 
 path = require('path');
 
@@ -60,7 +46,7 @@ this.G = process.config.at;
 this.moduleName = (path.basename(module.parent.id)).replace(/[.](?:js|coffee)/, '');
 
 this.setAliases = function(target, source) {
-  return this.each(source, function(v, k) {
+  return _.each(source, function(v, k) {
     if (v in target) {
       throw "target should not have key:" + v;
     }
@@ -68,8 +54,8 @@ this.setAliases = function(target, source) {
   });
 };
 
-if ((ref = main.supp) != null) {
-  ref.call(this);
+if ((ref1 = main.supp) != null) {
+  ref1.call(this);
 }
 
 isTDD = main.startModule !== module.parent.filename;
