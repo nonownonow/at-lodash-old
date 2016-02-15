@@ -1,7 +1,13 @@
-@path=require 'path'
+@path = require 'path'
+#@r = require 'xregexp'
+@log = require('tracer').console
+   format: "{{message}} {{file}}:{{line}} {{title}}",
+   dateformat: "HH:MM:ss.L"
+   inspectOpt:
+      depth: 12
 
-_=require 'lodash'
-s=require 'underscore.string'
+_ = require 'lodash'
+s = require 'underscore.string'
 _.mixin s.exports()
 
 u = require 'underscore'
