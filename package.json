@@ -1,6 +1,6 @@
 {
-  "name": "oneinme",
-  "version": "1.0.0",
+  "name": "at",
+  "version": "0.0.0",
   "description": "coffeescript framework",
   "main": "src/at",
   "scripts": {

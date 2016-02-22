@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Unnamed" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <node-options />
+    <gulpfile>$PROJECT_DIR$/gulpfile.coffee</gulpfile>
+    <tasks>
+      <task>debug init</task>
+    </tasks>
+    <arguments />
+    <envs />
+    <method />
+  </configuration>
+</component>

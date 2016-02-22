@@ -8,9 +8,16 @@ gulp=require 'gulp'
 gulp.task 'start',->
 gulp.task 'debug init',['clean','coffee']
 gulp.task 'clean',->
-   del.sync(['.comp/**/*.js','.comp/**/*.map'])
+   del.sync(['.comp/**'])
 
 gulp.task 'coffee',->
+#   gulp.src(['**/*.coffee','!_/**/*.*','!node_modules/**/*.*'])
+#   .pipe(plumber())
+#   .pipe(sourcemaps.init())
+#   .pipe(coffee(bare:true))
+#   .pipe(sourcemaps.write('.',sourceRoot:'../'))
+#   .pipe(gulp.dest('.comp/'))
+
    gulp.src(['src/**/*.coffee'])
    .pipe(plumber())
    .pipe(sourcemaps.init())
