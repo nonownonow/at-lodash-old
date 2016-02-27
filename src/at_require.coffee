@@ -1,5 +1,4 @@
 
-console.log '******at_require\n'
 @path = require 'path'
 #@r = require 'xregexp'
 @log = require('tracer').console

@@ -7,7 +7,7 @@
     <ui>bdd</ui>
     <extra-mocha-options>--compilers coffee:coffee-script/register --require ./test/mocha_cfg</extra-mocha-options>
     <test-kind>PATTERN</test-kind>
-    <test-pattern>test/**/*_.coffee</test-pattern>
+    <test-pattern>test/*/*$.coffee</test-pattern>
     <method>
       <option name="FwBeforeLaunchTask" enabled="true" />
     </method>

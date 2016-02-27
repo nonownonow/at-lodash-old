@@ -1,8 +1,8 @@
-_=require 'lodash'
-@name=__filename.replace __dirname,''
-@main = ->
-Object.defineProperty @main,'name',{writable:true}
-@main.name="main#{_.now()}"
+require at
+#@name=__filename.replace __dirname,''
+#@main = ->
+#Object.defineProperty @main,'name',{writable:true}
+#@main.name="main#{_.now()}"
 #   @isContext=true
 #   @G.check=null
 #@init = ->
@@ -14,5 +14,4 @@ Object.defineProperty @main,'name',{writable:true}
 #@caller_noTDD()
 
 #@startModule = require.main.filename
-require '../src/at'
 #module.exports=@main

@@ -1,5 +1,4 @@
-require('./config')('a','b')
-console.log 'at'
+#require './_config'
 
 #beforeEach -> delete require.cache[k] for k of require.cache
 #describe.only "load", ->
