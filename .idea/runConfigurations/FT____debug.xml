@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="oneinme.test.debug" type="mocha-javascript-test-runner" factoryName="Mocha">
+  <configuration default="false" name="FT :: debug" type="mocha-javascript-test-runner" factoryName="Mocha">
     <node-options />
     <working-directory>$PROJECT_DIR$/</working-directory>
     <pass-parent-env>true</pass-parent-env>
@@ -7,7 +7,7 @@
     <ui>bdd</ui>
     <extra-mocha-options />
     <test-kind>PATTERN</test-kind>
-    <test-pattern>.comp/test/*$.js</test-pattern>
+    <test-pattern>.comp/test/*functional_tests$.js</test-pattern>
     <method>
       <option name="RunConfigurationTask" enabled="true" run_configuration_name="Unnamed" run_configuration_type="js.build_tools.gulp" />
     </method>

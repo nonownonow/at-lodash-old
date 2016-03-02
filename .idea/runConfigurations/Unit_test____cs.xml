@@ -1,13 +1,13 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="oneinme.test" type="mocha-javascript-test-runner" factoryName="Mocha">
+  <configuration default="false" name="Unit test :: cs" type="mocha-javascript-test-runner" factoryName="Mocha">
     <node-options />
     <working-directory>$PROJECT_DIR$</working-directory>
     <pass-parent-env>true</pass-parent-env>
     <envs />
     <ui>bdd</ui>
-    <extra-mocha-options>--compilers coffee:coffee-script/register --require ./test/mocha_cfg</extra-mocha-options>
+    <extra-mocha-options>--compilers coffee:coffee-script/register</extra-mocha-options>
     <test-kind>PATTERN</test-kind>
-    <test-pattern>test/*/*$.coffee</test-pattern>
+    <test-pattern>test/!(_functional_tests)*$.coffee</test-pattern>
     <method>
       <option name="FwBeforeLaunchTask" enabled="true" />
     </method>

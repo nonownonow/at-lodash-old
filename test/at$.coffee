@@ -1,16 +1,13 @@
-#require './_config'
+require './_config'
 
+describe '',->
+   it '',->
 #beforeEach -> delete require.cache[k] for k of require.cache
+
 #describe.only "load", ->
-#   before -> core_files.forEach (v)-> (-> require "#{core_dir}/#{v}").should.not.throw()
 #   beforeEach -> require "#{module_src}"
-#   context "when supp_files isn't exist", ->
-#      before -> supp_files.forEach (v)-> (-> require "#{supp_dir}/#{v}").should.throw()
-#      it "should is pushed in require.cache", ->
 #         core_files.forEach (v)-> Object.keys(require.cache).should.have.matchAny(new RegExp "#{core_dir}/#{v}.+$")
 #   context "when supp_files exist", ->
-#      before -> supp_files.forEach (v)-> fs.openSync("#{supp_dir}/#{v}.js", 'w')
-#      after -> supp_files.forEach (v)-> fs.unlinkSync("#{supp_dir}/#{v}.js")
 #      it "should is pushed in require.cache", ->
 #         supp_files.forEach (v)-> Object.keys(require.cache).should.have.matchAny(new RegExp "#{supp_dir}/#{v}.+$")
 #describe "at", (test)->

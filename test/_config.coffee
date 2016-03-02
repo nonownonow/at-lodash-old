@@ -1,43 +1,62 @@
+beforeEach ->
+   delete require.cache[k] for k of require.cache
+   @user_normal = require './user/normal'
+
 @should = require 'should'
 @fs = require 'fs'
 @path = require 'path'
-
+@console = require('tracer').console
+   format: "{{message}} {{file}}:{{line}} {{title}}"
+   dateformat: "HH:MM:ss.L"
+   inspectOpt:
+      depth: 12
+@log=@console.log
 _ = @__proto__ = require 'lodash'
 process.chdir(__dirname)
 HELPER_DIRS = ['./user']
 PARENT = module.parent
 @sep = '$'
-@ext = @path.extname PARENT.filename
-@target_dir = @path.resolve "../src"
-@target_name = @path.basename(PARENT.filename, @ext).replace("#{@sep}", "")
-@target_src = "#{@target_dir}/#{@target_name}"
-_.assign global,
-   _: require 'lodash'
-   at: @path.resolve "../src/at"
+@js = @path.extname PARENT.filename
+@at_dir = @path.resolve "../src"
+@at_name = @path.basename(PARENT.filename, @js).replace("#{@sep}", "")
+@at_src = "#{@at_dir}/#{@at_name}"
+@user_dir = @path.resolve "./user"
+@loaded_by_at = ["at_require", "at_load"]
+@loaded_by_user = ["load"]
 
 main = $ = ->
-#   install_helper_objs=@flow(
-#      $.dir2objs
-#      $.install_helper_obj
-#   ) HELPER_DIRS
+#   $.helper_objs HELPER_DIRS
    $.at()
-$.install_helper_obj = (obj_names) => _.each obj_names, (names,dir)=> _.each names, (v)=>
-   src = "#{dir}/#{v}"
-   filename = @path.basename src, @ext
-   dirname = @path.dirname(src).replace('./','')
-   key="#{dirname}_#{filename}"
-   @[key]=require src
-   @[key].__proto__=toString:->key
 
-$.dir2objs= (HELPER_DIRS)=>_.transform HELPER_DIRS, (r,v)=>
+
+$.install_helper_obj = (obj_names) => _.each obj_names, (names, dir)=> _.each names, (v)=>
+   src = "#{dir}/#{v}"
+   filename = @path.basename src, @js
+   dirname = @path.dirname(src).replace('./', '')
+   key = "#{dirname}_#{filename}"
+   @[key] = require src
+   @[key].__proto__ =
+      toString: -> key
+
+$.dir2objs = (HELPER_DIRS)=>_.transform HELPER_DIRS, (r, v)=>
    obj_names = @fs.readdirSync(v)
    findjs = (filename)-> /[.](js|coffee)$/.test filename
    obj_names = _.remove(obj_names, findjs)
-   r[v]=obj_names
-,{}
+   r[v] = obj_names
+, {}
 
-$.at= =>
+$.helper_objs = @flow(
+   $.dir2objs
+   $.install_helper_obj
+)
+$.at = =>
    mocha = module.parent.parent.exports
-   Object.assign mocha.Suite.prototype, @
+   Suite_tail_proto = mocha.Suite.prototype.__proto__
+   Suite_tail_proto.__proto__ = {}
+   Suite_tail_proto.__proto__ = @
    Object.setPrototypeOf mocha.Context.prototype, mocha.Suite.prototype
-main.call @,$
+   _.assign global,
+      _: require 'lodash'
+      at: @path.resolve "../src/at"
+      Suite_tail_proto:Suite_tail_proto.__proto__
+main.call @, $
