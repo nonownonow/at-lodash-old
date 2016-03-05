@@ -1,4 +1,4 @@
-require "./_config"
+require "./_config.coffee"
 #extract global file the global beforeEach
 # at itself be tested by _functional_tests and function in at be tested by at$
 # FDD perspective
@@ -8,8 +8,6 @@ describe "user_normal", ->
       @keys(require.cache).should.not.have.matchAny(new RegExp "/at#{@js}$")
    it "should have __proto__ which is a native Object type", ->
       @user_normal.should.has.a.property('__proto__').which.has.a.property('__proto__', null)
-
-describe "user_normal | load |", ->
    before -> @loaded_by_at.forEach (v)=> (=> require "#{@at_dir}/#{v}").should.not.throw()
    it "should require core modules", ->
       @each ["at_load#{@js}", "at_require#{@js}"], (v)=> @keys(require.cache).should.have.matchAny(new RegExp v)
