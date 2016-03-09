@@ -135,9 +135,18 @@ require 'at'
 
 #FDD : main 함수는 filename으로 자동 참조한다
 
-#ODD : @[filename]함수객체의 @[filename].new(obj)를 호출하면(obj는 생성자에서 초기화에 사용되는는 object) *obj의 my_key값과 일치하는 @[my_key] 값을 obj[my_key]의 값으로 초기화시켜* @[filename]함수 객체에 member로써 집어 넣는다. 그리고 @의 모든 함수를 *그 인자중 (@[my_key])-> 형태의 인자가 모두 @[my_key]에 curry하여* @[filename]함수객체에 method로써 집어 넣는다. 그리고 이렇게 member와 method를 갖춘 @[filename]함수객체를 인스턴스객체로써 반환한다. 
-
-#ODD 체인패턴 : 위와 같은 원리로 @[filename].$(obj)함수를 구현하되 $함수객체에 들어가는 method는 @를 반환하도록 가공한다
+###
+ODD : @[filename]함수객체의 @[filename].new(obj)를 호출하면(obj는 생성자에서 
+초기화에 사용되는는 object) 새로운 객체 new_obj생성한다. 그리고 
+obj의 member를 new_obj의 member로써 집어 넣는다. 그리고 
+@의 모든 함수를 실행context의 member를 참조하는 인자가 실행context에 curry된 형태로 
+가공하여 new_obj의 method로 집어 넣는다. 그리고 
+이렇게 member와 method를 갖춘 new_obj를 인스턴스객체로써 반환한다. 
+###
+###
+ODD 체인패턴 : 위와 같은 원리로 @[filename].$(obj)함수를 구현하되 
+$함수가 반환하는 new_obj의 모든 method는 실행 context를 반환하도록 가공한다
+###
 
 @main = (@arr)->@t(
    @$(@get_odd_sum2)
