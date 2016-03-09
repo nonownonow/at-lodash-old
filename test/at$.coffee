@@ -1,53 +1,51 @@
-#move require command to mocha option file
-#move mock file in mocha test file
-should = require 'should'
-sinon = require 'sinon'
-require 'should-sinon'
-fs = require 'fs'
-process.chdir(__dirname)
-describe "at", ->
-   core_files = ["at_require", "at_load"]
-   supp_files = ["load"]
-   core_dir = "../src"
-   supp_dir = "."
-   beforeEach ->
-      delete require.cache[k] for k of require.cache
-   describe "load", ->
-      context "when supp_files isn't exist", ->
-         before ->
-            core_files.forEach (v)-> (-> require "#{core_dir}/#{v}").should.not.throw()
-            supp_files.forEach (v)-> (-> require "#{supp_dir}/#{v}").should.throw()
-            delete require.cache[k] for k of require.cache
-         it "should is pushed in require.cache", ->
-            require './at_caller'
-            core_files.forEach (v)-> Object.keys(require.cache).should.have.matchAny(new RegExp "#{core_dir}/#{v}.+$")
-      context "when supp_files exist", ->
-         before ->
-            core_files.forEach (v)-> (-> require "#{core_dir}/#{v}").should.not.throw()
-            supp_files.forEach (v)-> fs.openSync("#{supp_dir}/#{v}.js", 'w')
-            delete require.cache[k] for k of require.cache
-         after ->
-            supp_files.forEach (v)-> fs.unlinkSync("#{supp_dir}/#{v}.js")
-         it "should is pushed in require.cache", ->
-            require './at_caller'
-            supp_files.forEach (v)-> Object.keys(require.cache).should.have.matchAny(new RegExp "#{supp_dir}/#{v}.+$")
-   describe "at_module", ->
-      at_require= require '../src/at_require'
-      it "is about FDD", ->
-         at_require.should.have.properties('flowRight', 'iterators', 'extendOwn', 'levenshtein')
-         at_require.u_repeat(5, 'a').should.be.eql(['a', 'a', 'a', 'a', 'a'])
-      it "is about util",->
-         at_require.should.have.properties('log')
-#   describe "at_load",->
-#      at_load=require '../src/at_load'
+require './_config'
+
+describe '',->
+   it '',->
+#beforeEach -> delete require.cache[k] for k of require.cache
+
+#describe.only "load", ->
+#   beforeEach -> require "#{module_src}"
+#         core_files.forEach (v)-> Object.keys(require.cache).should.have.matchAny(new RegExp "#{core_dir}/#{v}.+$")
+#   context "when supp_files exist", ->
+#      it "should is pushed in require.cache", ->
+#         supp_files.forEach (v)-> Object.keys(require.cache).should.have.matchAny(new RegExp "#{supp_dir}/#{v}.+$")
+#describe "at", (test)->
+#   mocks=( v.replace('.js','') for v in fs.readdirSync('.') when not _.endsWith(v,'map') and _.includes(v,'at') )
+#   .forEach (v)=>@[v]=require "./#{v}"
+#   at_str=fs.readFileSync("../index#{extension}",'utf8')
+#   at_without_main_str = at_str.replace(/^@main[\w\W]+?(?=^[^\s])/m, '')
+#   at_without_supp_init_str=at_str.replace(/^(@supp|@init)[\w\W]+?(?=^[^\s])/mg,'')
+#   beforeEach -> at = require './at_with_main'
+#   it 'should not cached in require.cache', ->
+#      Object.keys(require.cache).should.not.have.matchAny(new RegExp "/src/at.+$")
+#   it 'should be a function',=>
+#      @at_with_main.should.be.a.Function()
+#      @at_with_main.should.be.property('name')
+#   describe "::main",->
+#      context "when don't have main function", ->
+#         beforeEach -> fs.writeFileSync("../index#{extension}",at_without_main_str)
+#         afterEach -> fs.writeFileSync("../index#{extension}",at_str)
+#         it "should throw error", ->
+#            (->require '../').should.throw('should must have main')
+#      context "when have main function",->
+#         it 'should be a module.exports', ->
+#            at.should.have.property('main').which.is.a.Function()
+#   describe "::context",->
+#      context "when parent is mocha",->
+#         it "should have a property, 'context'",->
+#            at.should.have.a.property('context')
+#      context "when parent is not mocha",->
+#         it "should have not a property, 'context'",->
+#            at.should.not.have.a.property('context')
+
+
 #      before ->
-#         process.config.at._test
-#      it "is about value",->
-#         at_load.should.have.property('G')
-#      it "is about function",->
-#describe "at_function", ->
-#   describe "@extend", ->
-#   describe "@at",->
+#         fs.writeFileSync("../index#{extension}",at_without_supp_init_str)
+#      it "should not thorw error",->
+
+
+#      at.should.be.a.Function() #      caller.should.have.a.property('at_caller') #   describe "at_load",-> #      at_load=require '../src/at_load' #      before -> #         process.config.at._test #      it "is about value",-> #         at_load.should.have.property('G') #      it "is about function",-> #describe "at_function", -> #   describe "@extend", -> #   describe "@at",->
 ### describe "at_function", ->
    beforeEach -> caller = require './at_caller'
    describe "@setAliases(obj)", ->
@@ -101,9 +99,7 @@ describe "caller.context[function]", ->
       context "when module.parent.exports has not 'supp' function", ->
          it "should not have function of context wich of supp", ->
             caller_opp.context.should.have.not.enumerable('supp_fn1')
-   describe "FDD", ->###
-#      it "baseCheck",->
-#      it "exec",->
+   describe "FDD", ->### #      it "baseCheck",-> #      it "exec",->
 
 #      it "should make module.export's var to module.parent.export's var",->
 
