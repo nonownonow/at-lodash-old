@@ -37,7 +37,6 @@ Helper 라이브러리로써,
 
 [my_module_father.coffee]
 ```
-#!coffeescript
 require 'at'
 
 @my_id= ->
@@ -50,7 +49,6 @@ require 'at'
 
 [my_module_mother.coffee]
 ```
-#!coffeescript
 require 'at'
 
 @my_id= ->
@@ -62,7 +60,6 @@ require 'at'
 
 [my_module_uncle.coffee]
 ```
-#!coffeescript
 require 'at'
 
 #t는 lodash의 flow, $는 curryRight, S는 partialRight를 참조함
@@ -104,7 +101,6 @@ new_obj의 모든 method는 실행 context를 반환하도록 가공되어 new_o
 
 [my_module_son.coffee]
 ```
-#!coffeescript
 require 'at'
 require 'my_module_mother'
 require 'my_module_father'
@@ -118,7 +114,6 @@ require 'my_module_father'
 
 [my_module_house.coffee]
 ```
-#!coffeescript
 require 'at'
 require 'my_module_son'
 
@@ -135,7 +130,6 @@ require 'my_module_son'
 [my_module_FDD.coffee]
 
 ```
-#!coffeescript
 require 'at'
 require 'my_module_uncle'
 
@@ -149,7 +143,6 @@ res=@get_odd_sum2 [5..10]
 [my_module_ODD.coffee]
 
 ```
-#!coffeescript
 require 'at'
 require 'my_module_uncle'
 
