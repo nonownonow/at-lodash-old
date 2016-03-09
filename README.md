@@ -20,7 +20,7 @@ Helper 라이브러리로써,
 
 바탕으로 구현된 라이브러리다.
 
-### **at 스타일 모듈 작성** ###
+### **at 모듈 작성법** ###
 [load.coffee = require 시킬 모듈들을 작성, 작성하는 파일과 같은 경로에 생성]
 ```
 #!coffeescript
@@ -61,7 +61,7 @@ require 'at'
    "#{@my_id()}'s hobby is to play the piano"   
 ```
 
-[my_module_daughter.coffee]
+[my_module_uncle.coffee]
 ```
 #!coffeescript
 require 'at'
@@ -73,15 +73,15 @@ require 'at'
 ###
 ODD : @[filename]함수객체의 @[filename].new(obj)를 호출하면(obj는 생성자에서 
 초기화에 사용되는는 object) 새로운 객체 new_obj생성한다. 그리고 
-obj의 member를 new_obj의 member로써 집어 넣는다. 그리고 
+obj의 member를 new_obj의 member(불변변수)로써 집어 넣는다. 그리고 
 @의 모든 함수를 실행context의 member를 참조하는 인자가 실행context에 curry된 형태로 
 가공하여 new_obj의 method로 집어 넣는다. 그리고 
 이렇게 member와 method를 갖춘 new_obj를 인스턴스객체로써 반환한다. 
 ###
 
 ###
-ODD 체인패턴 : 위와 같은 원리로 @[filename].$(obj)함수를 구현하되 
-$함수가 반환하는 new_obj의 모든 method는 실행 context를 반환하도록 가공한다
+ODD 체인패턴 : 위에서 생성되는 new_obj는 함수객체로써 new_obj(obj)함수가 실행되면
+new_obj의 모든 method는 실행 context를 반환하도록 가공되어 new_obj에 재장착된다
 ###
 
 @main = (@arr)->@t(
@@ -117,7 +117,7 @@ require 'my_module_father'
    @father_hobby()+@mother_hobby()   
 ```
 
-[my_module_test.coffee]
+[my_module_house.coffee]
 ```
 #!coffeescript
 require 'at'
@@ -133,34 +133,12 @@ require 'my_module_son'
 
 ### **함수지향 (Lodash 기본상속)** ###
 
-[my_module_daughter.coffee]
-```
-#!coffeescript
-require 'at'
-#t는 lodash의 flow, $는 curryRight, S는 partialRight
-#main 함수는 filename으로 자동 참조됨
-@main = ->@t(
-   @$(@get_odd_sum2)
-   @$(@set_more_element_by_odd) [11,12,13,14,15]
-) arguments...
-
-@get_odd_sum2 = (arr,fn=@identity)->@t(
-   @$(@filter) @odd
-   @$(@sum) 2
-   @$(fn)
-) arguments...
-
-@set_more_element_by_odd=(arr,el...)->@t(
-   @$(@concat) @S(@filter,@odd) el
-) arguments...
-```
-
 [my_module_FDD.coffee]
 
 ```
 #!coffeescript
 require 'at'
-require 'my_module_daughter'
+require 'my_module_uncle'
 
 res=@my_module_daughter [1,2,3,4,5]
 #res는 [3,5,7,11,13,15]
@@ -174,12 +152,12 @@ res=@get_odd_sum2 [5..10]
 ```
 #!coffeescript
 require 'at'
-require 'my_module_daughtor'
+require 'my_module_uncle'
 
-@my_obj=@my_module_daughtor.new(arg: [1...5])
-@my_obj2=@my_module_daughtor.new(arg: [10...15])
+@my_obj=@my_module_uncle.new(arg: [1...5])
+@my_obj2=@my_module_uncle.new(arg: [10...15])
 
-res=@my_obj.my_module_daughtor [21...25])
+res=@my_obj.my_module_uncle [21...25]
 #res는 [3,5,7,21,23,25]
 res=@my_obj.get_odd_sum2()
 #res는 [5,7,9,23,25,27]
@@ -187,7 +165,7 @@ res=@my_obj.get_odd_sum2()
 res2=@my_obj2.set_more_element_by_odd([1...10])
 #res는 [11,13,15,1,3,5,7,9]
 
-res=@my_module_daughtor(arg:[1...5]).set_more_element_by_odd([1...10])
+res=@my_obj2(arg:[1...5]).set_more_element_by_odd([1...10])
 #res는 [3,5,7,1,3,5,7,9]
 ```
 
