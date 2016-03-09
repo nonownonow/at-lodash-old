@@ -143,6 +143,7 @@ obj의 member를 new_obj의 member로써 집어 넣는다. 그리고
 가공하여 new_obj의 method로 집어 넣는다. 그리고 
 이렇게 member와 method를 갖춘 new_obj를 인스턴스객체로써 반환한다. 
 ###
+
 ###
 ODD 체인패턴 : 위와 같은 원리로 @[filename].$(obj)함수를 구현하되 
 $함수가 반환하는 new_obj의 모든 method는 실행 context를 반환하도록 가공한다
