@@ -135,7 +135,7 @@ require 'at'
 
 #FDD : main 함수는 filename으로 자동 참조한다
 
-#ODD : @[filename]함수객체의 @[filename].new(obj #초기화 object)를 호출하면 *obj의 my_key값과 일치하는 @[my_key] 값을 obj[my_key]의 값으로 초기화시켜* @[filename]함수 객체에 member로써 집어 넣는다. 그리고 @의 모든 함수를 *그 인자중 (@[my_key])-> 형태의 인자가 모두 @[my_key]에 curry하여* @[filename]함수객체에 method로써 집어 넣는다. 그리고 이렇게 member와 method를 갖춘 @[filename]함수객체를 인스턴스객체로써 반환한다. 
+#ODD : @[filename]함수객체의 @[filename].new(obj)를 호출하면(obj는 생성자에서 초기화에 사용되는는 object) *obj의 my_key값과 일치하는 @[my_key] 값을 obj[my_key]의 값으로 초기화시켜* @[filename]함수 객체에 member로써 집어 넣는다. 그리고 @의 모든 함수를 *그 인자중 (@[my_key])-> 형태의 인자가 모두 @[my_key]에 curry하여* @[filename]함수객체에 method로써 집어 넣는다. 그리고 이렇게 member와 method를 갖춘 @[filename]함수객체를 인스턴스객체로써 반환한다. 
 
 #ODD 체인패턴 : 위와 같은 원리로 @[filename].$(obj)함수를 구현하되 $함수객체에 들어가는 method는 @를 반환하도록 가공한다
 
@@ -154,11 +154,12 @@ require 'at'
    @$(@concat) @S(@filter,@odd) el
 ) arguments...
 ```
-my_module_ODD.coffee]
+[my_module_ODD.coffee]
+
 ```
 #!coffeescript
 require 'at'
-require 'my_module_daughtor.coffee'
+require 'my_module_daughtor'
 
 @my_obj=@my_module_daughtor.new(arg: [1...5])
 res=@my_obj.my_module_daughtor [21...25])
@@ -168,5 +169,5 @@ res=@my_obj.get_odd_sum2()
 
 res=@my_module_daughtor(arg:[1...5]).set_more_element_by_odd([1...10])
 #res는 [3,5,7,1,3,5,7,9]
-
+```
 현재 2015/3/9 : FDD 구현중
