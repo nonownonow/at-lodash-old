@@ -6,14 +6,19 @@ nodejs에서 coffeescript로 코딩시,
 1. 함수지향 (Lodash 기본상속)
 1. 객체지향 (메소드체인패턴 자동구현)
 
-을 추구함에 있어서, 
+을 특징으로 하는 at 라이브러리는, 
 
 1. 가독성과
 1. 유연성과
 1. 표현력을 높여
 
 빠른 개발과, 견고한 유지보수를 꾀하는
-Helper 라이브러리
+Helper 라이브러리로써, 
+
+1. nodejs의 module을 활용한 prototype기반의 객체지향과
+1. javascript의 일급함수를 활용한 클로저 기반의 함수지향을
+
+바탕으로 구현된 라이브러리다.
 
 ### **at 스타일 모듈 작성** ###
 [load.coffee = require 시킬 모듈들을 작성, 작성하는 파일과 같은 경로에 생성]
@@ -54,6 +59,45 @@ require 'at'
 
 @mother_hobby =>
    "#{@my_id()}'s hobby is to play the piano"   
+```
+
+[my_module_daughter.coffee]
+```
+#!coffeescript
+require 'at'
+
+#t는 lodash의 flow, $는 curryRight, S는 partialRight를 참조함
+
+#FDD : main 함수는 filename으로 자동 참조한다
+
+###
+ODD : @[filename]함수객체의 @[filename].new(obj)를 호출하면(obj는 생성자에서 
+초기화에 사용되는는 object) 새로운 객체 new_obj생성한다. 그리고 
+obj의 member를 new_obj의 member로써 집어 넣는다. 그리고 
+@의 모든 함수를 실행context의 member를 참조하는 인자가 실행context에 curry된 형태로 
+가공하여 new_obj의 method로 집어 넣는다. 그리고 
+이렇게 member와 method를 갖춘 new_obj를 인스턴스객체로써 반환한다. 
+###
+
+###
+ODD 체인패턴 : 위와 같은 원리로 @[filename].$(obj)함수를 구현하되 
+$함수가 반환하는 new_obj의 모든 method는 실행 context를 반환하도록 가공한다
+###
+
+@main = (@arr)->@t(
+   @$(@get_odd_sum2)
+   @$(@set_more_element_by_odd) [11,12,13,14,15]
+) arguments...
+
+@get_odd_sum2 = (@arr,fn=@identity)->@t(
+   @$(@filter) @odd
+   @$(@sum) 2
+   @$(fn)
+) arguments...
+
+@set_more_element_by_odd=(@arr,el...)->@t(
+   @$(@concat) @S(@filter,@odd) el
+) arguments...
 ```
 
 
@@ -120,50 +164,11 @@ require 'my_module_daughter'
 
 res=@my_module_daughter [1,2,3,4,5]
 #res는 [3,5,7,11,13,15]
-
 res=@get_odd_sum2 [5..10]
 #res는 [5,7,9]
 ```
 ### **객체지향 (메소드체인패턴 자동구현)** ###
 
-[my_module_daughter.coffee]
-```
-#!coffeescript
-require 'at'
-
-#t는 lodash의 flow, $는 curryRight, S는 partialRight를 참조함
-
-#FDD : main 함수는 filename으로 자동 참조한다
-
-###
-ODD : @[filename]함수객체의 @[filename].new(obj)를 호출하면(obj는 생성자에서 
-초기화에 사용되는는 object) 새로운 객체 new_obj생성한다. 그리고 
-obj의 member를 new_obj의 member로써 집어 넣는다. 그리고 
-@의 모든 함수를 실행context의 member를 참조하는 인자가 실행context에 curry된 형태로 
-가공하여 new_obj의 method로 집어 넣는다. 그리고 
-이렇게 member와 method를 갖춘 new_obj를 인스턴스객체로써 반환한다. 
-###
-
-###
-ODD 체인패턴 : 위와 같은 원리로 @[filename].$(obj)함수를 구현하되 
-$함수가 반환하는 new_obj의 모든 method는 실행 context를 반환하도록 가공한다
-###
-
-@main = (@arr)->@t(
-   @$(@get_odd_sum2)
-   @$(@set_more_element_by_odd) [11,12,13,14,15]
-) arguments...
-
-@get_odd_sum2 = (@arr,fn=@identity)->@t(
-   @$(@filter) @odd
-   @$(@sum) 2
-   @$(fn)
-) arguments...
-
-@set_more_element_by_odd=(@arr,el...)->@t(
-   @$(@concat) @S(@filter,@odd) el
-) arguments...
-```
 [my_module_ODD.coffee]
 
 ```
@@ -193,6 +198,5 @@ res=@my_module_daughtor(arg:[1...5]).set_more_element_by_odd([1...10])
 
 
 결론 2 : nodejs는 require함수를 통해 모든 모듈을 객체로 다루며, 모듈과 모듈간의 관계도 모듈객체를 통해 객체로 다루기 때문에 객체와 객체의 관계를 function객체를 통해 클래스계념으로 다루기보다 객체 내부의 __proto__체인을 통해 prototype계념으로 다루는 것이 낫다고 생각된다. 
-그래서 at을 구현하여 nodejs에서 prototype기반의 객체지향을 쉽게 접근해보려 했고, 아울러 임급함수기반이라는 javascript의 언어적 특징을 살리기 위해 lodash라이브러리를 내장함으로써 함수지향을 쉽게 접근해보려 했다.
 
 현재 2015/3/9 : FDD 구현중
