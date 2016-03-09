@@ -2,7 +2,7 @@ beforeEach ->
    delete require.cache[k] for k of require.cache
    @user_normal = require './user/normal'
    @at_require=require '../src/at_require'
-   @ctx=my_fn:(->),cb:@sinon.spy()
+   @ctx=fn:(->),cb:@sinon.spy()
 #require 'should-promise'
 @sinon=require 'sinon'
 @should = require 'should'

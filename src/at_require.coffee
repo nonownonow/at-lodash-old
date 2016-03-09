@@ -15,7 +15,6 @@ _.assign @, _
    _.each _.functions(@), (v)=>
       Object.defineProperty @[v],'name',{writable:true}
       @[v].name=v
-@set_function_name()
 @set_aliases
    c:'constant'
    u:'splat'
@@ -25,15 +24,18 @@ _.assign @, _
    it:'iterator'
    $:'curryRight'
    S:'partialRight'
-   v:'flow'
+   t:'flow'
 @set_unary_function=(obj)->
    _.each obj, (v,k)=> @[k]=_.ary @[v],1
 @set_unary_function
    SS:'partialRight'
    $$:'curryRight'
-   vv:'flowRight'
+   tt:'flowRight'
 
-#   Object.defineProperty @main,'name',{writable:true}
+@v=(var_name)->_.curryRight(_.wrap) (fn, e)=>@[var_name]=fn(e)
+@x=_.curryRight(_.wrap) (fn,e)=>
+   fn.call(@,e)
+   e
 
 @fs = require 'fs'
 @path = require 'path'

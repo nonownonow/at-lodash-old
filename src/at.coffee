@@ -2,13 +2,6 @@ _ = require 'lodash'
 _.each require.cache, (v, k, cache)-> delete cache[k] if /src\/at[.].+/.test k
 parentDir = module.parent.filename.match(/(.+)\/.+/)?[1]
 #throw new Error('should must have main') unless 'main' in _.keys @
-#@__proto__ = (->)
-#require_files = [
-#   "./at_require"
-#   "./at_load"
-#   "#{parentDir}/load"
-#].forEach (v)=> try Object.assign @, require v
-
 [
    "./at_require"
    "./at_load"
