@@ -172,12 +172,22 @@ require 'at'
 require 'my_module_daughtor'
 
 @my_obj=@my_module_daughtor.new(arg: [1...5])
+@my_obj2=@my_module_daughtor.new(arg: [10...15])
+
 res=@my_obj.my_module_daughtor [21...25])
 #res는 [3,5,7,21,23,25]
 res=@my_obj.get_odd_sum2()
 #res는 [5,7,9,23,25,27]
 
+res2=@my_obj2.set_more_element_by_odd([1...10])
+#res는 [11,13,15,1,3,5,7,9]
+
 res=@my_module_daughtor(arg:[1...5]).set_more_element_by_odd([1...10])
 #res는 [3,5,7,1,3,5,7,9]
 ```
+
+결론 : javascript는 prototype 기반의 객체지향언어이기에 function객체를 클래스 용도로 사용하지 않고, __proto__ 체인을 사용하여 객체지향의 모든 개념을 구현할 수 있다. 오히려 function객체를 클래스 용도로 사용함으로 우회현상이 발생하기에, 보다 동적이고 직관적인 __proto__체인의 사용이 더 효율적이지 않을까 생각된다. 
+또한 nodejs는 require함수를 통해 모든 모듈을 객체로 다루며, 모듈과 모듈간의 관계도 모듈객체를 통해 객체로 다루기 때문에 객체와 객체의 관계를 function객체를 통해 클래스계념으로 다루기보다 객체 내부의 __proto__체인을 통해 prototype계념으로 다루는 것이 낫다고 생각된다.
+그래서 at을 구현하여 nodejs에서 prototype기반의 객체지향을 쉽게 접근해보려 했고, 아울러 임급함수기반이라는 javascript의 언어적 특징을 살리기 위해 lodash라이브러리를 내장함으로써 함수지향을 쉽게 접근해보려 했다.
+
 현재 2015/3/9 : FDD 구현중
