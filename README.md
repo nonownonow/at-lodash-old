@@ -23,7 +23,6 @@ Helper 라이브러리로써,
 ### **at 모듈 작성법** ###
 [load.coffee = require 시킬 모듈들을 작성, 작성하는 파일과 같은 경로에 생성]
 ```
-#!coffeescript
 @fs = require 'fs'
 @path = require 'path'
 @Q = require 'q'
