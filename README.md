@@ -101,7 +101,7 @@ new_obj의 모든 method는 실행 context를 반환하도록 가공되어 new_o
 ```
 
 
-### **프로토타입 상속** ###
+### **at 사용법 : 프로토타입 상속** ###
 
 [my_module_son.coffee]
 ```
@@ -131,7 +131,7 @@ require 'my_module_son'
 ```
 결론 : 모든 require된 module이 at에 의하여 최종 module에 __proto__체인으로 연결된다. 이 때 같은 이름의 함수가 오버라이드 됨으로 그 결과를 모두 보장할 수 없고, at은 main module에서 2단계 깊이의 module의 함수까지만 보장해준다. 2단계 깊이의 module간에는 먼저 require된 module의 함수가 shadowing된다.
 
-### **함수지향 (Lodash 기본상속)** ###
+### **at 사용법 : 함수지향 (Lodash 기본상속)** ###
 
 [my_module_FDD.coffee]
 
@@ -145,7 +145,7 @@ res=@my_module_daughter [1,2,3,4,5]
 res=@get_odd_sum2 [5..10]
 #res는 [5,7,9]
 ```
-### **객체지향 (메소드체인패턴 자동구현)** ###
+### **at 사용법 : 객체지향 (메소드체인패턴 자동구현)** ###
 
 [my_module_ODD.coffee]
 
