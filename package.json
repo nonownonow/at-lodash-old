@@ -1,7 +1,7 @@
 {
-  "name": "at",
-  "version": "0.0.0",
-  "description": "coffeescript framework",
+  "name": "at-lodash",
+  "version": "1.0.0",
+  "description"git: "coffeescript framework",
   "main": "src/at",
   "scripts": {
     "test": "test mocha"
