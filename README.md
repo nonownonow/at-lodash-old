@@ -23,7 +23,7 @@ Helper 라이브러리로써,
 
 바탕으로 구현된 라이브러리다.
 
-### **at 모듈 작성법** ###
+### **at-lodash 모듈 작성법** ###
 [load.coffee = require 시킬 모듈들을 작성, 작성하는 파일과 같은 경로에 생성]
 ```js
 @fs = require 'fs'
@@ -40,7 +40,7 @@ Helper 라이브러리로써,
 
 [my_module_father.coffee]
 ```js
-require 'at'
+require 'at-lodash'
 
 @my_id= ->
    @path.resolve '.'
@@ -52,7 +52,7 @@ require 'at'
 
 [my_module_mother.coffee]
 ```js
-require 'at'
+require 'at-lodash'
 
 @my_id= ->
    @path.resolve '.'
@@ -63,7 +63,7 @@ require 'at'
 
 [my_module_uncle.coffee]
 ```js
-require 'at'
+require 'at-lodash'
 
 #t는 lodash의 flow, $는 curryRight, S는 partialRight를 참조함
 
@@ -104,7 +104,7 @@ new_obj의 모든 method는 실행 context를 반환하도록 가공되어 new_o
 
 [my_module_son.coffee]
 ```js
-require 'at'
+require 'at-lodash'
 require 'my_module_mother'
 require 'my_module_father'
 
@@ -117,7 +117,7 @@ require 'my_module_father'
 
 [my_module_house.coffee]
 ```js
-require 'at'
+require 'at-lodash'
 require 'my_module_son'
 
 @console.log @my_id()
@@ -133,7 +133,7 @@ require 'my_module_son'
 [my_module_FDD.coffee]
 
 ```js
-require 'at'
+require 'at-loadh'
 require 'my_module_uncle'
 
 res=@my_module_daughter [1,2,3,4,5]
@@ -146,7 +146,7 @@ res=@get_odd_sum2 [5..10]
 [my_module_ODD.coffee]
 
 ```js
-require 'at'
+require 'at-lodash'
 require 'my_module_uncle'
 
 @my_obj=@my_module_uncle.new(arg: [1...5])
