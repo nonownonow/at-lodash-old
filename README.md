@@ -1,7 +1,8 @@
 # **@lodash** #
-
-설치 : npm install at-lodash
-
+[install]
+```
+   npm install at-lodash
+```
 nodejs에서 coffeescript로 코딩시,
 
 1. 프로토타입 상속
@@ -24,7 +25,7 @@ Helper 라이브러리로써,
 
 ### **at 모듈 작성법** ###
 [load.coffee = require 시킬 모듈들을 작성, 작성하는 파일과 같은 경로에 생성]
-```
+```js
 @fs = require 'fs'
 @path = require 'path'
 @Q = require 'q'
@@ -38,7 +39,7 @@ Helper 라이브러리로써,
 ```
 
 [my_module_father.coffee]
-```
+```js
 require 'at'
 
 @my_id= ->
@@ -50,7 +51,7 @@ require 'at'
 
 
 [my_module_mother.coffee]
-```
+```js
 require 'at'
 
 @my_id= ->
@@ -61,7 +62,7 @@ require 'at'
 ```
 
 [my_module_uncle.coffee]
-```
+```js
 require 'at'
 
 #t는 lodash의 flow, $는 curryRight, S는 partialRight를 참조함
@@ -102,7 +103,7 @@ new_obj의 모든 method는 실행 context를 반환하도록 가공되어 new_o
 ### **at 사용법 : 프로토타입 상속** ###
 
 [my_module_son.coffee]
-```
+```js
 require 'at'
 require 'my_module_mother'
 require 'my_module_father'
@@ -115,7 +116,7 @@ require 'my_module_father'
 ```
 
 [my_module_house.coffee]
-```
+```js
 require 'at'
 require 'my_module_son'
 
@@ -131,7 +132,7 @@ require 'my_module_son'
 
 [my_module_FDD.coffee]
 
-```
+```js
 require 'at'
 require 'my_module_uncle'
 
@@ -144,7 +145,7 @@ res=@get_odd_sum2 [5..10]
 
 [my_module_ODD.coffee]
 
-```
+```js
 require 'at'
 require 'my_module_uncle'
 
@@ -171,4 +172,4 @@ res=@my_obj2(arg:[1...5]).set_more_element_by_odd([1...10])
 
 결론 2 : nodejs는 require함수를 통해 모든 모듈을 객체로 다루며, 모듈과 모듈간의 관계도 모듈객체를 통해 객체로 다루기 때문에 객체와 객체의 관계를 function객체를 통해 클래스계념으로 다루기보다 객체 내부의 __proto__체인을 통해 prototype계념으로 다루는 것이 낫다고 생각된다. 
 
-현재 2015/3/9 : FDD 구현중
+현재 2015/3/18 : FDD까지 구현 완료
