@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nonownonow/oneinme.git"
+    "url": "https://github.com/nonownonow/at-lodash.git"
   },
   "keywords": [
     "coffeescript",
     "frameworks",
     "regex"
   ],
-  "author": "oneinme",
-  "license": "MIT",
+  "author": "nonownonow",
+  "license": "GPL",
   "bugs": {
-    "url": "https://github.com/nonownonow/oneinme/issues"
+    "url": "https://github.com/nonownonow/at-lodash/issues"
   },
-  "homepage": "https://github.com/nonownonow/oneinme#readme",
+  "homepage": "https://github.com/nonownonow/at-lodash#readme",
   "devDependencies": {
     "coffee-script": "latest",
     "del": "^2.2.0",
