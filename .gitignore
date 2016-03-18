@@ -10,11 +10,12 @@ pids
 #dependency directory
 node_modules
 
-#compile directory
-.comp
-
 #temporary directory
 **/_
 
 #webstorm conf directory
+.idea
+.comp
+
+
 .idea
