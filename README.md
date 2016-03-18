@@ -1,4 +1,6 @@
-# **at** #
+# **@lodash** #
+
+설치 : npm install at-lodash
 
 nodejs에서 coffeescript로 코딩시,
 
