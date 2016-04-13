@@ -1,0 +1,39 @@
+{
+  "name": "nonownonow",
+  "version": "1.0.1",
+  "description": "nonownonow_start_template"
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.com/nonownonow/nonownonow.git"
+  },
+  "keywords": [
+    "coffeescript",
+    "template"
+  ],
+  "author": {
+    "name": "nonownonow"
+  },
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/nonownonow/at-lodash/issues"
+  },
+  "homepage": "https://github.com/nonownonow/at-lodash#readme",
+  "devDependencies": {
+    "webdriverio": "^4.0.5",
+    "coffee-script": "latest",
+    "mocha":"latest",
+    "should": "^8.1.1",
+    "should-sinon": "0.0.5",
+    "sinon": "^1.17.3"
+  },
+  "dependencies": {
+    "at-lodash": "^1.1.3"
+  }
+}

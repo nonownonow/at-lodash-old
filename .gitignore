@@ -1,0 +1,25 @@
+## Project Template
+.idea/
+
+## Dependency
+node_modules
+
+## Logs
+logs
+*.log
+npm-debug.log*
+
+## Except File
+
+
+## MicrosoftOffice template
+*.tmp
+
+## Word temporary
+~$*.doc*
+
+## Excel temporary
+~$*.xls*
+
+## Excel Backup File
+*.xlk

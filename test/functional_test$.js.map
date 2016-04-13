@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "functional_test$.js",
+  "sourceRoot": "",
+  "sources": [
+    "functional_test$.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,IAAA;;AAAA,IAAC,CAAA,GAAD,GAAK;;AACL,CAAA,GAAE,OAAA,CAAQ,WAAR;;AACF,OAAO,CAAC,GAAR,CAAY,GAAZ;;AACA,QAAA,CAAS,EAAT,EAAY,SAAA;SACT,EAAA,CAAG,EAAH,EAAM,SAAA,GAAA,CAAN;AADS,CAAZ"
+}
