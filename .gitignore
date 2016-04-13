@@ -10,7 +10,10 @@ logs
 npm-debug.log*
 
 ## Except File
-
+*/**/*.js
+*/**/*.*.map
+*/**/*.html
+*/**/*.css
 
 ## MicrosoftOffice template
 *.tmp
