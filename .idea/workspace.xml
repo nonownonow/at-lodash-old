@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d84cd77-01e7-45f0-978b-2facf5d36ebf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/specs/functional_test.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wdio.conf.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/selenium_test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional_test$.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional_test$.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional_test$.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/selenium-server-standalone-2.53.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/uploads/sample.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/selenium.sh" afterPath="$PROJECT_DIR$/bin/selenium.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/mocha selenium.sh" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wdio.conf.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="kpi_rev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +28,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+                <state relative-caret-position="392">
+                  <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
                   <folding />
                 </state>
               </provider>
@@ -141,16 +134,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/test/test.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -160,16 +143,39 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="28">
                   <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding>
+                    <marker date="1460523679370" expanded="true" signature="54:275" placeholder="..." />
+                    <marker date="1460523679370" expanded="true" signature="124:275" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mocha selenium.sh" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/bin/mocha selenium.sh">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="28">
+                  <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="wdio.conf.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/wdio.conf.js">
+          <file leaf-file-name="test$.coffee" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test/test$.coffee">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="56">
-                  <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+                  <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="wdio.conf.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/bin/wdio.conf.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="504">
+                  <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -193,13 +199,16 @@
         <option value="$PROJECT_DIR$/node_modules/at-lodash/src/at.coffee" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/test/test.js" />
         <option value="$PROJECT_DIR$/test/specs/functional_test.coffee" />
         <option value="$PROJECT_DIR$/bin/selenium.sh" />
         <option value="$PROJECT_DIR$/test/specs/test.js" />
         <option value="$PROJECT_DIR$/test/functional_test.coffee" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/wdio.conf.js" />
+        <option value="$PROJECT_DIR$/bin/mocha selenium.sh" />
+        <option value="$PROJECT_DIR$/bin/wdio.conf.js" />
+        <option value="$PROJECT_DIR$/test/test$.coffee" />
       </list>
     </option>
   </component>
@@ -221,7 +230,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -272,88 +281,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="specs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="at-lodash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nonownonow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -373,18 +300,19 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/test/specs" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/node_modules/bin" />
-      <recent name="$PROJECT_DIR$/node_modules/.bin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Mocha.fn">
+  <component name="RunManager" selected="Bash.ut-fn">
     <configuration default="false" name="selenium.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
@@ -402,6 +330,17 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/node_modules/.bin" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/node_modules/.bin/selenium.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="nonownonow" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ft" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bin" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bin/mocha selenium.sh" />
       <option name="PARAMETERS" value="" />
       <module name="nonownonow" />
       <envs />
@@ -474,7 +413,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="fn" type="mocha-javascript-test-runner" factoryName="Mocha">
+    <configuration default="false" name="ut-fn" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bin" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bin/mocha selenium.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="nonownonow" />
+      <envs />
+      <method>
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="ut" run_configuration_type="mocha-javascript-test-runner" />
+      </method>
+    </configuration>
+    <configuration default="false" name="ut" type="mocha-javascript-test-runner" factoryName="Mocha">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <working-directory>$PROJECT_DIR$</working-directory>
@@ -489,17 +441,20 @@
         <option name="FwBeforeLaunchTask" enabled="true" />
       </method>
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Bash.selenium.sh" />
-      <item index="1" class="java.lang.String" itemvalue="Bash.selenium.sh (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Mocha.fn" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.selenium_test.js" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Bash.ut-fn" />
+      <item index="1" class="java.lang.String" itemvalue="Bash.selenium.sh" />
+      <item index="2" class="java.lang.String" itemvalue="Bash.selenium.sh (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Bash.ft" />
+      <item index="4" class="java.lang.String" itemvalue="Mocha.ut" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.selenium_test.js" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Bash.selenium.sh" />
-        <item index="1" class="java.lang.String" itemvalue="Bash.selenium.sh (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.selenium_test.js" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Bash.ft" />
+        <item index="1" class="java.lang.String" itemvalue="Bash.selenium.sh" />
+        <item index="2" class="java.lang.String" itemvalue="Bash.selenium.sh (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.selenium_test.js" />
       </list>
     </recent_temporary>
   </component>
@@ -525,29 +480,11 @@
       <workItem from="1460515101641" duration="20000" />
       <workItem from="1460515143830" duration="2318000" />
       <workItem from="1460517530408" duration="1420000" />
-      <workItem from="1460520272360" duration="1917000" />
+      <workItem from="1460520272360" duration="5636000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="fn - 2016.04.13 at 09h 21m 58s.xml">
-      <configuration name="fn" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="fn - 2016.04.13 at 09h 22m 01s.xml">
-      <configuration name="fn" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="fn - 2016.04.13 at 09h 22m 54s.xml">
-      <configuration name="fn" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="fn - 2016.04.13 at 09h 23m 02s.xml">
-      <configuration name="fn" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="fn - 2016.04.13 at 09h 23m 07s.xml">
-      <configuration name="fn" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="fn - 2016.04.13 at 09h 23m 43s.xml">
-      <configuration name="fn" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="fn - 2016.04.13 at 09h 24m 24s.xml">
       <configuration name="fn" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -560,13 +497,31 @@
     <history-entry file="fn - 2016.04.13 at 14h 05m 51s.xml">
       <configuration name="fn" configurationId="mocha-javascript-test-runner" />
     </history-entry>
+    <history-entry file="fn - 2016.04.13 at 14h 06m 32s.xml">
+      <configuration name="fn" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="ut - 2016.04.13 at 14h 59m 45s.xml">
+      <configuration name="ut" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="ut - 2016.04.13 at 15h 40m 36s.xml">
+      <configuration name="ut" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="ut - 2016.04.13 at 15h 42m 54s.xml">
+      <configuration name="ut" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="ut-fn - 2016.04.13 at 15h 41m 30s.xml">
+      <configuration name="ut-fn" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="ut-fn - 2016.04.13 at 15h 42m 19s.xml">
+      <configuration name="ut-fn" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15488000" />
+    <option name="totallyTimeSpent" value="19207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="24" width="1873" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -574,7 +529,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23020834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -618,21 +573,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/specs/functional_test.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/at-lodash/gulpfile.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/at-lodash/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -740,7 +680,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1460523679370" expanded="true" signature="54:275" placeholder="..." />
+            <marker date="1460523679370" expanded="true" signature="124:275" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -836,7 +779,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1460523679370" expanded="true" signature="54:275" placeholder="..." />
+            <marker date="1460523679370" expanded="true" signature="124:275" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -957,23 +903,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test.coffee" />
-    <entry file="file://$PROJECT_DIR$/bin/selenium_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wdio.config.js" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
@@ -1021,18 +951,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/specs/functional_test.coffee">
+    <entry file="file://$PROJECT_DIR$/bin/selenium_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="84">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wdio.conf.js">
+    <entry file="file://$PROJECT_DIR$/test/specs/functional_test.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1460523679370" expanded="true" signature="54:275" placeholder="..." />
+            <marker date="1460523679370" expanded="true" signature="124:275" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/mocha selenium.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/wdio.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test$.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding />
         </state>
       </provider>

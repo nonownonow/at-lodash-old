@@ -2,18 +2,19 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/_config.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/src/at_require.js" />
         <item url="file://$PROJECT_DIR$/node_modules/at-lodash/src/at.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/at_require$.js" />
         <item url="file://$PROJECT_DIR$/node_modules/at-lodash/src/at_temp.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/_functional_tests$.js" />
         <item url="file://$PROJECT_DIR$/node_modules/at-lodash/src/at_load.js" />
         <item url="file://$PROJECT_DIR$/test/specs/functional_test.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/gulpfile.js" />
         <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/user/normal.js" />
         <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/at$.js" />
         <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/user/extended.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/_config.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/src/at_require.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/at_require$.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/_functional_tests$.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/gulpfile.js" />
+        <item url="file://$PROJECT_DIR$/test/test$.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -31,6 +32,7 @@
       <root url="file://$PROJECT_DIR$/node_modules/at-lodash/test/at_require$.js" />
       <root url="file://$PROJECT_DIR$/node_modules/at-lodash/test/_functional_tests$.js" />
       <root url="file://$PROJECT_DIR$/node_modules/at-lodash/gulpfile.js" />
+      <root url="file://$PROJECT_DIR$/test/test$.js" />
     </CLASSES>
     <SOURCES />
   </library>
