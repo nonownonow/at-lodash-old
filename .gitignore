@@ -1,9 +1,7 @@
 ## Project Template
-#.idea/
 
 ## Dependency
 node_modules
-!node_modules/.bin/selenium*
 
 ## Logs
 logs
@@ -11,10 +9,12 @@ logs
 npm-debug.log*
 
 ## Except File
-*/**/*.js
-*/**/*.*.map
-*/**/*.html
-*/**/*.css
+*.js
+*.map
+#*.html
+#!node_modules/**/*.html
+#*.css
+#!node_modules/**/*.css
 
 ## MicrosoftOffice template
 *.tmp
