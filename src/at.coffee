@@ -1,20 +1,12 @@
+
 _ = require 'lodash'
 _.each require.cache, (v, k, cache)-> delete cache[k] if /src\/at[.].+/.test k
-parentDir = module.parent.filename.match(/(.+)\/.+/)?[1]
 #throw new Error('should must have main') unless 'main' in _.keys @
-[
-   "./at_require"
-   "./at_load"
-   "#{parentDir}/load"
-].forEach (v,k)=>
-   try
-      req=require v
-      preproto=@__proto__
-      @__proto__=req
-      @__proto__.__proto__=preproto
-
-
-module.parent.exports.__proto__ = module.exports
+@__proto__=require './at_require'
+@__proto__.__proto__=require './at_load'
+parentDir = module.parent.parent.filename.match(/(.+)\/.+/)?[1]
+try @__proto__.__proto__.__proto__=require "#{parentDir}/load"
+module.parent.parent.exports.__proto__ = @__proto__
 #main = module.parent.exports.main.bind @
 #_.assign main, module.parent.exports
 #_.each require.cache, (v, k, cache)->
@@ -44,5 +36,4 @@ module.parent.exports.__proto__ = module.exports
 #
 #module.parent.exports = main
 #module.exports = ->
-
 

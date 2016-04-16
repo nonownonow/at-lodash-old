@@ -1,25 +1,21 @@
 {
-  "name": "nonownonow",
-  "version": "1.0.1",
-  "description": "nonownonow_start_template",
+  "name": "at-lodash",
+  "version": "1.1.8",
+  "description": "coffeescript framework",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nonownonow/nonownonow.git"
+    "url": "https://github.com/nonownonow/at-lodash.git"
   },
   "keywords": [
     "coffeescript",
-    "template"
+    "frameworks",
+    "regex"
   ],
-  "author": {
-    "name": "nonownonow"
-  },
+  "author": "nonownonow",
   "license": "GPL",
   "bugs": {
     "url": "https://github.com/nonownonow/at-lodash/issues"
