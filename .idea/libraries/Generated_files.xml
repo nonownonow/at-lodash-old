@@ -2,19 +2,24 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/src/at.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/src/at_temp.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/src/at_load.js" />
-        <item url="file://$PROJECT_DIR$/test/specs/functional_test.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/user/normal.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/at$.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/user/extended.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/_config.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/src/at_require.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/at_require$.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/test/_functional_tests$.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/at-lodash/gulpfile.js" />
-        <item url="file://$PROJECT_DIR$/test/test$.js" />
+        <item url="file://$PROJECT_DIR$/test/_/_config_at.js" />
+        <item url="file://$PROJECT_DIR$/gulpfile.js" />
+        <item url="file://$PROJECT_DIR$/test/user/_/user_noTDD.js" />
+        <item url="file://$PROJECT_DIR$/test/user/normal.js" />
+        <item url="file://$PROJECT_DIR$/test/user/_/user_without_main.js" />
+        <item url="file://$PROJECT_DIR$/test/user/extended.js" />
+        <item url="file://$PROJECT_DIR$/test/user/_/user_opp.js" />
+        <item url="file://$PROJECT_DIR$/test/_functional_tests$.js" />
+        <item url="file://$PROJECT_DIR$/test/_config.js" />
+        <item url="file://$PROJECT_DIR$/test/at$.js" />
+        <item url="file://$PROJECT_DIR$/test/at_require$.js" />
+        <item url="file://$PROJECT_DIR$/test/_/test2.js" />
+        <item url="file://$PROJECT_DIR$/src/at_load.js" />
+        <item url="file://$PROJECT_DIR$/src/at_temp.js" />
+        <item url="file://$PROJECT_DIR$/test/user/_/basic.js" />
+        <item url="file://$PROJECT_DIR$/src/at.js" />
+        <item url="file://$PROJECT_DIR$/test/_/test.js" />
+        <item url="file://$PROJECT_DIR$/src/at_require.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -33,6 +38,24 @@
       <root url="file://$PROJECT_DIR$/node_modules/at-lodash/test/_functional_tests$.js" />
       <root url="file://$PROJECT_DIR$/node_modules/at-lodash/gulpfile.js" />
       <root url="file://$PROJECT_DIR$/test/test$.js" />
+      <root url="file://$PROJECT_DIR$/test/_/_config_at.js" />
+      <root url="file://$PROJECT_DIR$/gulpfile.js" />
+      <root url="file://$PROJECT_DIR$/test/user/_/user_noTDD.js" />
+      <root url="file://$PROJECT_DIR$/test/user/normal.js" />
+      <root url="file://$PROJECT_DIR$/test/user/_/user_without_main.js" />
+      <root url="file://$PROJECT_DIR$/test/user/extended.js" />
+      <root url="file://$PROJECT_DIR$/test/user/_/user_opp.js" />
+      <root url="file://$PROJECT_DIR$/test/_functional_tests$.js" />
+      <root url="file://$PROJECT_DIR$/test/_config.js" />
+      <root url="file://$PROJECT_DIR$/test/at$.js" />
+      <root url="file://$PROJECT_DIR$/test/at_require$.js" />
+      <root url="file://$PROJECT_DIR$/test/_/test2.js" />
+      <root url="file://$PROJECT_DIR$/src/at_load.js" />
+      <root url="file://$PROJECT_DIR$/src/at_temp.js" />
+      <root url="file://$PROJECT_DIR$/test/user/_/basic.js" />
+      <root url="file://$PROJECT_DIR$/src/at.js" />
+      <root url="file://$PROJECT_DIR$/test/_/test.js" />
+      <root url="file://$PROJECT_DIR$/src/at_require.js" />
     </CLASSES>
     <SOURCES />
   </library>
