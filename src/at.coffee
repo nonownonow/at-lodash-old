@@ -1,4 +1,3 @@
-
 _ = require 'lodash'
 _.each require.cache, (v, k, cache)-> delete cache[k] if /src\/at[.].+/.test k
 #throw new Error('should must have main') unless 'main' in _.keys @
