@@ -2,11 +2,14 @@ require "../config"
 #extract global file the global beforeEach
 # at itself be tested by _functional_tests and function in at be tested by at$
 # FDD perspective
+that=@
 describe 'functional',->
-   it 'start',->
-#   describe "user_normal", ->
-#      it "should require module 'at'", ->
-#         @user_normal.should.be.a.Object().which.has.a.property('at_version')
+   before -> @user_normal=require './user/normal'
+
+   describe "user_normal", ->
+      it "should require module 'at'", ->
+         @user_normal.should.be.a.Object().which.has.a.property('at_version')
+         that.should.be.a.property 'main'
 #         @keys(require.cache).should.not.have.matchAny(new RegExp "/at#{@js}$")
 #      it "should have __proto__ which is a native Object type", ->
 #         @user_normal.should.has.a.property('__proto__').which.has.a.property('__proto__', null)
