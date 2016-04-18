@@ -1,27 +1,5 @@
 <component name="libraryTable">
   <library name="Generated files" type="javaScript">
-    <properties>
-      <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/test/unit/at_load.js" />
-        <item url="file://$PROJECT_DIR$/test/_/_config_at.js" />
-        <item url="file://$PROJECT_DIR$/test/config.js" />
-        <item url="file://$PROJECT_DIR$/gulpfile.js" />
-        <item url="file://$PROJECT_DIR$/test/functional/user/normal.js" />
-        <item url="file://$PROJECT_DIR$/test/_config.js" />
-        <item url="file://$PROJECT_DIR$/test/user/normal.js" />
-        <item url="file://$PROJECT_DIR$/test/unit/at$.js" />
-        <item url="file://$PROJECT_DIR$/test/user/extended.js" />
-        <item url="file://$PROJECT_DIR$/test/unit/at_require$.js" />
-        <item url="file://$PROJECT_DIR$/test/_/test2.js" />
-        <item url="file://$PROJECT_DIR$/src/at_load.js" />
-        <item url="file://$PROJECT_DIR$/test/functional/_functional_tests$.js" />
-        <item url="file://$PROJECT_DIR$/src/at_temp.js" />
-        <item url="file://$PROJECT_DIR$/test/_/_config.js" />
-        <item url="file://$PROJECT_DIR$/src/at-lodash.js" />
-        <item url="file://$PROJECT_DIR$/test/_/test.js" />
-        <item url="file://$PROJECT_DIR$/src/at_require.js" />
-      </sourceFilesUrls>
-    </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/test/test.js" />
       <root url="file://$PROJECT_DIR$/test/test.js" />
