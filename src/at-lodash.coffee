@@ -1,5 +1,5 @@
 _ = require 'lodash'
-_.each require.cache, (v, k, cache)-> delete cache[k] if /src\/at[.].+/.test k
+_.each require.cache, (v, k, cache)-> delete cache[k] if /src\/at-lodash[.].+/.test k
 #throw new Error('should must have main') unless 'main' in _.keys @
 @__proto__=require './at_require'
 @__proto__.__proto__=require './at_load'
