@@ -1,6 +1,6 @@
 {
   "name": "at-lodash",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "coffeescript framework",
   "main": "index.js",
   "scripts": {

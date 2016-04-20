@@ -4,11 +4,12 @@ _.each require.cache, (v, k, cache)-> delete cache[k] if /src\/at[.].+/.test k
 @__proto__=require './at_require'
 @__proto__.__proto__=require './at_load'
 parentDir = module.parent.parent.filename.match(/(.+)\/.+/)?[1]
-try @__proto__.__proto__.__proto__=require "#{parentDir}/require"
+requireObj=require "#{parentDir}/require"
+@__proto__.__proto__.__proto__=requireObj if requireObj?
 caller=module.parent.parent
 parent_of_caller=module.parent.parent.parent
 caller.exports.__proto__ = @__proto__
-parent_of_caller.exports.__proto__=caller.exports
+parent_of_caller?.exports?.__proto__=caller.exports
 #main = module.parent.exports.main.bind @
 #_.assign main, module.parent.exports
 #_.each require.cache, (v, k, cache)->
