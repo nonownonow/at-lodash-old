@@ -1,5 +1,4 @@
 require "#{process.cwd()}/index.js"
-console.log
 @main='main'
 #@name=__filename.replace __dirname,''
 

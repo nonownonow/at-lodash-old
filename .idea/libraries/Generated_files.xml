@@ -1,5 +1,34 @@
 <component name="libraryTable">
   <library name="Generated files" type="javaScript">
+<<<<<<< HEAD
+=======
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/test/config.js" />
+        <item url="file://$PROJECT_DIR$/test/unit/at_load.js" />
+        <item url="file://$PROJECT_DIR$/test/_/_config_at.js" />
+        <item url="file://$PROJECT_DIR$/gulpfile.js" />
+        <item url="file://$PROJECT_DIR$/test/functional/user/normal.js" />
+        <item url="file://$PROJECT_DIR$/test/_config.js" />
+        <item url="file://$PROJECT_DIR$/test/functional/prototype_require.js" />
+        <item url="file://$PROJECT_DIR$/test/functional/odd.js" />
+        <item url="file://$PROJECT_DIR$/test/functional/prototype_inherit.js" />
+        <item url="file://$PROJECT_DIR$/test/functional/fdd.js" />
+        <item url="file://$PROJECT_DIR$/test/user/normal.js" />
+        <item url="file://$PROJECT_DIR$/test/user/extended.js" />
+        <item url="file://$PROJECT_DIR$/test/unit/at_require$.js" />
+        <item url="file://$PROJECT_DIR$/test/functional/user/at-lodash.js" />
+        <item url="file://$PROJECT_DIR$/test/_/test2.js" />
+        <item url="file://$PROJECT_DIR$/src/at_load.js" />
+        <item url="file://$PROJECT_DIR$/test/functional/_functional_tests$.js" />
+        <item url="file://$PROJECT_DIR$/src/at_temp.js" />
+        <item url="file://$PROJECT_DIR$/src/at-lodash.js" />
+        <item url="file://$PROJECT_DIR$/test/_/_config.js" />
+        <item url="file://$PROJECT_DIR$/test/_/test.js" />
+        <item url="file://$PROJECT_DIR$/src/at_require.js" />
+      </sourceFilesUrls>
+    </properties>
+>>>>>>> d4c9d1a2054209294644f1b5b5e0f7508822e934
     <CLASSES>
       <root url="file://$PROJECT_DIR$/test/test.js" />
       <root url="file://$PROJECT_DIR$/test/test.js" />
@@ -25,29 +54,33 @@
       <root url="file://$PROJECT_DIR$/test/_functional_tests$.js" />
       <root url="file://$PROJECT_DIR$/test/at_require$.js" />
       <root url="file://$PROJECT_DIR$/test/at$.js" />
-      <root url="file://$PROJECT_DIR$/test/config.js" />
-      <root url="file://$PROJECT_DIR$/test/_/_config_at.js" />
       <root url="file://$PROJECT_DIR$/test/unit/at_load.js" />
-      <root url="file://$PROJECT_DIR$/gulpfile.js" />
+      <root url="file://$PROJECT_DIR$/test/_/_config_at.js" />
       <root url="file://$PROJECT_DIR$/test/functional/user/_/user_noTDD.js" />
-      <root url="file://$PROJECT_DIR$/test/functional_browser/functional_test.js" />
       <root url="file://$PROJECT_DIR$/test/functional/user/normal.js" />
       <root url="file://$PROJECT_DIR$/test/functional/user/_/user_without_main.js" />
       <root url="file://$PROJECT_DIR$/test/functional/user/extended.js" />
       <root url="file://$PROJECT_DIR$/test/_config.js" />
       <root url="file://$PROJECT_DIR$/test/functional/user/_/user_opp.js" />
-      <root url="file://$PROJECT_DIR$/test/unit/at$.js" />
+      <root url="file://$PROJECT_DIR$/test/functional/prototype_require.js" />
+      <root url="file://$PROJECT_DIR$/test/functional/odd.js" />
+      <root url="file://$PROJECT_DIR$/test/functional/prototype_inherit.js" />
       <root url="file://$PROJECT_DIR$/test/user/normal.js" />
-      <root url="file://$PROJECT_DIR$/test/unit/at_require$.js" />
       <root url="file://$PROJECT_DIR$/test/user/extended.js" />
+      <root url="file://$PROJECT_DIR$/test/functional/at-lodash.js" />
       <root url="file://$PROJECT_DIR$/test/_/test2.js" />
+      <root url="file://$PROJECT_DIR$/test/functional/user/_/basic.js" />
+      <root url="file://$PROJECT_DIR$/test/_/test.js" />
+      <root url="file://$PROJECT_DIR$/test/config.js" />
+      <root url="file://$PROJECT_DIR$/gulpfile.js" />
+      <root url="file://$PROJECT_DIR$/test/functional_browser/functional_test.js" />
+      <root url="file://$PROJECT_DIR$/test/functional/fdd.js" />
+      <root url="file://$PROJECT_DIR$/test/unit/at_require$.js" />
       <root url="file://$PROJECT_DIR$/src/at_load.js" />
       <root url="file://$PROJECT_DIR$/test/functional/_functional_tests$.js" />
       <root url="file://$PROJECT_DIR$/src/at_temp.js" />
-      <root url="file://$PROJECT_DIR$/test/functional/user/_/basic.js" />
       <root url="file://$PROJECT_DIR$/src/at-lodash.js" />
       <root url="file://$PROJECT_DIR$/test/_/_config.js" />
-      <root url="file://$PROJECT_DIR$/test/_/test.js" />
       <root url="file://$PROJECT_DIR$/src/at_require.js" />
     </CLASSES>
     <SOURCES />
