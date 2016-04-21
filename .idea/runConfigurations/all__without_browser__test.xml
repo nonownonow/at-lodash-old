@@ -1,7 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="all (without browser)_test" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
-    <toRun type="mocha-javascript-test-runner" name="funtional_test" />
-    <toRun type="mocha-javascript-test-runner" name="unit_test" />
-    <method />
-  </configuration>
-</component>
