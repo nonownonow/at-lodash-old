@@ -1,5 +1,7 @@
 <component name="libraryTable">
   <library name="Generated files" type="javaScript">
+<<<<<<< HEAD
+=======
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/test/config.js" />
@@ -26,6 +28,7 @@
         <item url="file://$PROJECT_DIR$/src/at_require.js" />
       </sourceFilesUrls>
     </properties>
+>>>>>>> d4c9d1a2054209294644f1b5b5e0f7508822e934
     <CLASSES>
       <root url="file://$PROJECT_DIR$/test/test.js" />
       <root url="file://$PROJECT_DIR$/test/test.js" />

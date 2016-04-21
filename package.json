@@ -24,11 +24,11 @@
   "devDependencies": {
     "coffee-script": "latest",
     "mocha": "latest",
+    "wdio-mocha-framework": "^0.2.12",
+    "webdriverio": "^4.0.5",
     "should": "^8.1.1",
     "should-sinon": "0.0.5",
-    "sinon": "^1.17.3",
-    "wdio-mocha-framework": "^0.2.12",
-    "webdriverio": "^4.0.5"
+    "sinon": "^1.17.3"
   },
   "dependencies": {
     "lodash": "latest",
